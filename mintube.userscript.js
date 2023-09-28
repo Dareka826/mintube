@@ -13,6 +13,8 @@
   let perform_surgery;
   let cut_like_dislike;
   let remove_share_btn;
+  let render_popup_items;
+  let remove_extra_buttons;
 
 
   // Remove hidden metadata copy
@@ -100,9 +102,37 @@
   };
 
 
+  render_popup_items = function() {
+    let popup_btn = document.querySelectorAll('yt-button-shape > button[aria-label="More actions"]')[0];
+    popup_btn.click();
+    popup_btn.click();
+  };
+
+
+  remove_extra_buttons = function() {
+    let buttons = document.querySelectorAll('div#flexible-item-buttons')[0].children;
+
+    let wait_remove = function(label) {
+      let btn = document.querySelectorAll(`div#flexible-item-buttons button[aria-label="${label}"]`);
+
+      if (btn.length > 0) {
+        btn = btn[0];
+        btn.parentElement.removeChild(btn);
+
+      } else setTimeout(function() { wait_remove(label); }, 100);
+    };
+
+    setTimeout(function() { wait_remove("Download"); }, 0);
+    setTimeout(function() { wait_remove("Thanks");   }, 0);
+    setTimeout(function() { wait_remove("Clip");     }, 0);
+  };
+
+
   perform_surgery = function() {
     cut_like_dislike();
     remove_share_btn();
+    render_popup_items();
+    remove_extra_buttons();
   };
 
 })();
