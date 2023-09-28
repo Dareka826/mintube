@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        MinTube
-// @match       /https?:\/\/(www\.)?youtube.com\/watch/
+// @include     /https?:\/\/(www\.)?youtube\.com\/watch/
 // @grant       none
 // @version     1.0
 // @author      Rin Brk
