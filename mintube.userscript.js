@@ -42,6 +42,9 @@
 
     new_like_dislike_container.style.setProperty("height", "100%");
 
+    new_like_btn.setAttribute("class", "clickable");
+    new_dislike_btn.setAttribute("class", "clickable");
+
     let update_text = function() {
       if (likebtn_sel[0].getAttribute("aria-pressed") == "true") {
         new_like_btn.innerText = "Liked";

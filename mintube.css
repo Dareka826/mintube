@@ -31,7 +31,14 @@ button {
   font-size: 1.5em;
 
   border: none;
-  margin-right: 5px;
+}
+
+div#top-level-buttons-computed button {
+  margin-left: 5px;
+}
+
+button.clickable {
+  cursor: pointer;
 }
 
 button[aria-pressed="true"] {
