@@ -57,3 +57,7 @@ button[aria-pressed="false"] {
 #background.ytd-masthead {
     opacity: 1 !important;
 }
+
+#flexible-item-buttons {
+    display: none;
+}
