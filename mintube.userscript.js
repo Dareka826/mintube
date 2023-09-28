@@ -10,7 +10,9 @@
 (function() {
 
   let remove_flexy;
+  let perform_surgery;
   let cut_like_dislike;
+  let remove_share_btn;
 
 
   // Remove hidden metadata copy
@@ -21,7 +23,7 @@
       to_rm = to_rm[0].parentElement;
       to_rm.parentElement.removeChild(to_rm);
 
-      cut_like_dislike();
+      perform_surgery();
     } else setTimeout(remove_flexy, 100);
   };
   setTimeout(remove_flexy, 100);
@@ -89,6 +91,18 @@
     like_dislike_container_sel[0].style.setProperty("display", "none");
     likebtn_sel[0].innerHTML    = '';
     dislikebtn_sel[0].innerHTML = '';
+  };
+
+
+  remove_share_btn = function() {
+    let to_rm = document.querySelectorAll('yt-button-shape > button[aria-label="Share"]')[0].parentElement.parentElement;
+    to_rm.parentElement.removeChild(to_rm);
+  };
+
+
+  perform_surgery = function() {
+    cut_like_dislike();
+    remove_share_btn();
   };
 
 })();
