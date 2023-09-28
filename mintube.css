@@ -1,6 +1,7 @@
 /* vim: ts=2 sts=2 sw=2 et
  */
 
+/* Remove dimension limitations on content width and player */
 div#primary, div#player-container-outer {
   max-width: none !important;
 }
@@ -14,4 +15,34 @@ div.html5-video-container, div.html5-video-container > video {
   width: 100% !important;
   height: 100% !important;
   top: -100% !important;
+}
+
+/* Like/Dislike button styles */
+div#top-level-buttons-computed {
+  margin: 0px;
+}
+
+button {
+  height: 100%;
+  padding: 0px 16px;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.5em;
+
+  border: none;
+  margin-right: 5px;
+}
+
+button[aria-pressed="true"] {
+  color: #000;
+  background-color: #eee;
+}
+
+button[aria-pressed="false"] {
+  color: #eee;
+  background-color: #111;
+  border: solid;
+  border-color: #eee;
+  border-width: 0.1em;
 }
