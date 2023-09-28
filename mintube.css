@@ -53,3 +53,7 @@ button[aria-pressed="false"] {
   border-color: #eee;
   border-width: 0.1em;
 }
+
+#background.ytd-masthead {
+    opacity: 1 !important;
+}
