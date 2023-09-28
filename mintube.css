@@ -1,0 +1,17 @@
+/* vim: ts=2 sts=2 sw=2 et
+ */
+
+div#primary, div#player-container-outer {
+  max-width: none !important;
+}
+
+div.ytp-chrome-bottom {
+  width: calc(100% - 24px) !important;
+  left: 12px !important;
+}
+
+div.html5-video-container, div.html5-video-container > video {
+  width: 100% !important;
+  height: 100% !important;
+  top: -100% !important;
+}
